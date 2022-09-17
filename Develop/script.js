@@ -1,11 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// global variables
 
-var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var specialChar = '!@#$^&%*()+=-[]{}|:<>?,.';
-var numbers = '1234567890';
+var numOfCharacters;
+var useLowerCase; 
 
 function howManyCharacters() {
   numOfCharacters = parseInt( prompt("How many characters"));
@@ -13,9 +12,9 @@ function howManyCharacters() {
 }
 
 function useLowerCase() {
-  lowerCase = lowerCase.toLowerCase();
-  console.log(useLowerCaseLtrs)
-
+  uselowerCase = confirm("do you want to use lower case?");
+  console.log(useLowerCase)
+  
 }
 
 function generatePassword() {
@@ -23,14 +22,14 @@ function generatePassword() {
   howManyCharacters( );
   useLowerCase();
 
-  return "password"
+  return " final password"
 }
 
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#LR654321*");
 
   passwordText.value = password;
 
