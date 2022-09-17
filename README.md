@@ -10,4 +10,4 @@ the important factor of this assignment was to ensure that all of the associated
 
 # URL links 
 ## Repository link: https://github.com/rickymoua/3-password-generator.git
-## Deployment URL: 
+## Deployment URL: https://rickymoua.github.io/3-password-generator/
