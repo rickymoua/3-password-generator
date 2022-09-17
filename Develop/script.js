@@ -4,20 +4,21 @@ var generateBtn = document.querySelector("#generate");
 // global variables
 
 var numOfCharacters;
-var useLowerCase;
-var useUpperCase;  
-var numbers;
+var LowerCase = "abcdefghijklmnopqrstuvwxyz";
+var useUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";  
+var numbers = "1234567890";
 var passLength
+var password = '';
 
 
 function howManyCharacters() {
-  vRnumOfCharacters = parseInt( prompt("How many characters"));
+  var numOfCharacters = parseInt( prompt("How many characters"));
 
 }
 
 function useLowerCase() {
  var uselowerCase = confirm("do you want to use lower case?");
-  console.log = (useLowerCase)
+  console.log = (LowerCase)
   
 }
 
@@ -30,7 +31,7 @@ function generatePassword() {
     
     if (lengthConfirm) {
       if (confirm("Would you like to use lowercase characters?") == true) {
-          useLowerCase= true
+          LowerCase= true
       } 
 
       if (confirm("Would you like to use uppercase characters?") == true) {
@@ -47,18 +48,22 @@ function generatePassword() {
       if (useLowerCase === false && useUpperCase === false && numOfCharacters === false && numbers === false) {
         alert("At least one character type must be selected")
     }
+  }
+    var numOfCharacters = '';
+    characters += (LowerCase ? lower : '');
+    characters += (useUpperCase ? upper : '');
+    characters += (numOfCharacters ? special : '');
+    characters += (numbers? numbers : '');
 
-  howManyCharacters( );
-  useLowerCase();
+    password = password(lengthConfirm, characters);
+    document.getElementById("password").innerHTML = password;
 
-  return " final password"
-}
-
-
+  }
+// Write password to the #password input
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#LR654321*");
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
